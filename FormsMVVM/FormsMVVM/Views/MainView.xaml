@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<base:BaseReactiveContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:base="clr-namespace:FormsMVVM.Views.Base"
+             xmlns:vm="clr-namespace:FormsMVVM.ViewModel"
+             x:TypeArguments="vm:LoginViewModel"
+             x:Class="FormsMVVM.Views.MainView">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="EntryUsername" Placeholder="Introducir usuario"
+                   Text="{Binding Username}"/>
+            <Entry x:Name="EntryPassword" Placeholder="Introducir contraseña"
+                   Text="{Binding Password}"/>
+            <Button x:Name="ButtonLogin" Text="Login" Command="{Binding LoginCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</base:BaseReactiveContentPage>
